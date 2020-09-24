@@ -1,0 +1,11 @@
+{
+    "applinks": {
+        "apps": [],
+        "details": [
+            {
+                "appID": "HUK84N2792.com.elevatedliving.development",
+                "paths": ["*"]
+            },
+        ]
+    }
+}

@@ -1,0 +1,11 @@
+#!/bin/bash
+
+ssh elevatedliving@3.91.161.80 -p 22 -o StrictHostKeyChecking=no <<EOF
+  cd ~/apps/production/backend
+  git checkout master
+  git pull
+  npm install
+  pm2 stop production-pm2.json
+  pm2 start production-pm2.json
+  exit
+EOF

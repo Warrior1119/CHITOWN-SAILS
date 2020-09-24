@@ -1,0 +1,16 @@
+{
+  "apps": [
+    {
+      "name": "app-production",
+      "script": "./app.js",
+      "instances": 1,
+      "exec_mode": "cluster",
+      "max_memory_restart": "500M",
+      "env": {
+        "NODE_ENV": "production"
+      },
+      "out_file": "/dev/null",
+      "error_file": "/dev/null"
+    }
+  ]
+}

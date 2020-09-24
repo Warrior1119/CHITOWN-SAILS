@@ -1,0 +1,13 @@
+#!/bin/bash
+
+ssh elevatedliving@217.182.76.91 -p 13579 -o StrictHostKeyChecking=no <<EOF
+  source ~/.nvm/nvm.sh
+  cd ~/application/backend
+  git checkout staging
+  git pull
+  npm install
+  npm run docs
+  pm2 stop staging-pm2.json
+  pm2 start staging-pm2.json
+  exit
+EOF
